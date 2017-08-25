@@ -1,2 +1,2 @@
 # StalkPy
-A Python script to opens up the major social networks associated to a specific handle. Inspired from :rocket: :dancer
+Command line tool to open the major social accounts connected to the specfic handle. Inspired from [HandleStalker](https://github.com/samanthakem/HandleStalker) :dancer: :rocket:
