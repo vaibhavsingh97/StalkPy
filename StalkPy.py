@@ -20,13 +20,12 @@
 # you can find your copy of the License
 # https://vaibhavsingh97.mit-license.org/
 #-----------------------------------------------------------------------------
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 import sys
 import json
 import requests
 import os
-import threading
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 from clint.textui import colored, puts
 
 
@@ -106,7 +105,6 @@ class StalkPy():
                 puts(colored.green(social_account_name + ": ") +
                      colored.blue(CleanedLink(self.data[social_account_name], user)))
             r.close()
-        notification(3)
 
 
 if __name__ == '__main__':
@@ -119,6 +117,4 @@ if __name__ == '__main__':
         for i in range(1, len(sys.argv)):
             space()
             puts(colored.magenta("User: %s" % sys.argv[i]))
-            for t in range(10):
-                t = threading.Thread(target=StalkPy().OpenLinks(sys.argv[i]))
-                t.start()
+            StalkPy().OpenLinks(sys.argv[i])

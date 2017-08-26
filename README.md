@@ -44,6 +44,7 @@ python StalkPy.py
 - [ ] check list of browser and open accordingly
 - [ ] Command line addition of accounts to `Config.json`
 - [ ] check the validity of username.
+- [ ] handle case if no social account found 
 - [ ] test cross plateform support
 
 ## Issues
