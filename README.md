@@ -22,7 +22,7 @@ Command line tool to open the major social accounts connected to the specfic han
 **1.)** Clone the repository by using this link :
 
 ```
-https://github.com/vaibhavsingh97/StalkPy.git
+$ git clone https://github.com/vaibhavsingh97/StalkPy.git
 ```
 
 ### Run
@@ -30,8 +30,13 @@ https://github.com/vaibhavsingh97/StalkPy.git
 **2.)** Open terminal window there and the type these comands :
 
 ```
-cd Stalkpy && pip install -r requirements.txt
-python StalkPy.py
+$ cd Stalkpy && pip install -r requirements.txt
+```
+
+User can query as many username
+
+```
+$ python StalkPy.py [username1] [username2] ..
 ```
 
 ### Configure
@@ -44,8 +49,9 @@ python StalkPy.py
 - [ ] check list of browser and open accordingly
 - [ ] Command line addition of accounts to `Config.json`
 - [ ] check the validity of username.
-- [ ] handle case if no social account found 
+- [ ] handle case if no social account found
 - [ ] test cross plateform support
+- [ ] Add clint support
 
 ## Issues
 
