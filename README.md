@@ -2,7 +2,9 @@
 
 Command line tool to open the major social accounts connected to the specfic handle. Inspired from [HandleStalker](https://github.com/samanthakem/HandleStalker) :dancer: :rocket:
 
-[![Build Status](https://travis-ci.org/vaibhavsingh97/StalkPy.svg?branch=master)](https://travis-ci.org/vaibhavsingh97/StalkPy) [![Requirements Status](https://requires.io/github/vaibhavsingh97/StalkPy/requirements.svg?branch=master)](https://requires.io/github/vaibhavsingh97/StalkPy/requirements/?branch=master) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://vaibhavsingh97.mit-license.org/) <!-- https://github.com/jackton1/script_install -->
+[![Build Status](https://travis-ci.org/vaibhavsingh97/StalkPy.svg?branch=master)](https://travis-ci.org/vaibhavsingh97/StalkPy) [![Requirements Status](https://requires.io/github/vaibhavsingh97/StalkPy/requirements.svg?branch=master)](https://requires.io/github/vaibhavsingh97/StalkPy/requirements/?branch=master) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://vaibhavsingh97.mit-license.org/)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/50ce8c28eb9d48afa53a544aa9f208d2)](https://www.codacy.com/app/vaibhavsingh97/StalkPy?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=vaibhavsingh97/StalkPy&amp;utm_campaign=Badge_Grade)
+<!-- https://github.com/jackton1/script_install -->
 
 ```
                      _____   _             _   _      _____          
