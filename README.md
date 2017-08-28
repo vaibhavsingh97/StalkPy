@@ -2,6 +2,7 @@
 
 Command line tool to open the major social accounts connected to the specfic handle. Inspired from [HandleStalker](https://github.com/samanthakem/HandleStalker) :dancer: :rocket:
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d39fbd00d1a74b66bf53cb7ab9a7231a)](https://www.codacy.com/app/vaibhavsingh97/StalkPy?utm_source=github.com&utm_medium=referral&utm_content=vaibhavsingh97/StalkPy&utm_campaign=badger)
 [![Build Status](https://travis-ci.org/vaibhavsingh97/StalkPy.svg?branch=master)](https://travis-ci.org/vaibhavsingh97/StalkPy) [![Requirements Status](https://requires.io/github/vaibhavsingh97/StalkPy/requirements.svg?branch=master)](https://requires.io/github/vaibhavsingh97/StalkPy/requirements/?branch=master) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://vaibhavsingh97.mit-license.org/) <!-- https://github.com/jackton1/script_install -->
 
 ```
