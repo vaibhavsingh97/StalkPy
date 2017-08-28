@@ -37,14 +37,17 @@ class StalkPy():
         with open('config.json') as data_file:
             self.data = json.loads(data_file.read())
 
+    @classmethod
     def clear(self):
         """for removing the clutter from the screen when necessary"""
         os.system('cls' if os.name == 'nt' else 'clear')
 
+    @classmethod
     def space(self):
         """ for adding one linespace in the console"""
         print("")
 
+    @classmethod
     def head(self):
         """official banner for StalkPy printed in green color"""
         self.clear()
@@ -63,6 +66,7 @@ class StalkPy():
         """
         puts(colored.green(stalkPyBanner))
 
+    @classmethod
     def showDoc(self):
         documentation = """
         A simple python script to open the major social accounts connected to the
@@ -75,6 +79,7 @@ class StalkPy():
         puts(colored.cyan(documentation))
         self.space()
 
+    @classmethod
     def notification(self, flag):
         """messages for StalkPy tool which will be printed according to the flags"""
         if flag == 1:
@@ -88,6 +93,7 @@ class StalkPy():
             puts(colored.red("No Social accounts found. :("))
             flag = 0
 
+    @classmethod
     def CleanedLink(self, url, username):
         return "https://www." + url + username
 
