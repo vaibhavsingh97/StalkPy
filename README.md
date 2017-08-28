@@ -36,7 +36,13 @@ $ cd Stalkpy && pip install -r requirements.txt
 User can query as many username
 
 ```
-$ python StalkPy.py [username1] [username2] ..
+$ python StalkPy.py -u USERNAME [USERNAME ...]
+```
+
+To get help use
+
+```
+$ python StalkPy.py [-h] [--help]
 ```
 
 ### Configure
@@ -51,7 +57,7 @@ $ python StalkPy.py [username1] [username2] ..
 - [ ] check the validity of username.
 - [ ] handle case if no social account found
 - [ ] test cross plateform support
-- [ ] Add clint support
+- [x] Add clint support (used argparse)
 
 ## Issues
 

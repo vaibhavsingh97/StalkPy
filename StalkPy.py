@@ -26,6 +26,7 @@ import requests
 import os
 import webbrowser
 import threading
+import argparse
 from clint.textui import colored, puts
 from time import time as timer
 
@@ -117,15 +118,16 @@ if __name__ == '__main__':
     StalkPy().head()
     StalkPy().showDoc()
     start = timer()
-    if (len(sys.argv) < 2):
-        print("usage: \n python StalkPy.py [username1] [username2]...")
+    parser = argparse.ArgumentParser(
+        description="StalkPy help you to stalk anyone ;)")
+    parser.add_argument('-u', '--username', type=str,
+                        help='Usename you want to stalk', required=True, nargs='+')
+    args = parser.parse_args()
+    username_list = args.username[0].split(",")
+    for n in username_list:
         StalkPy().space()
-        puts(colored.red("Exiting..."))
-    else:
-        for i in range(1, len(sys.argv)):
-            StalkPy().space()
-            puts(colored.magenta("User: %s" % sys.argv[i]))
-            t = threading.Thread(target=StalkPy().OpenLinks(sys.argv[i]))
-            t.start()
-            t.join()
+        puts(colored.magenta("User: %s" % n))
+        t = threading.Thread(target=StalkPy().OpenLinks(n))
+        t.start()
+        t.join()
     print("Elapsed Time: %s" % (timer() - start,))
