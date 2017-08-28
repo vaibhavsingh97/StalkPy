@@ -20,7 +20,6 @@
 # you can find your copy of the License
 # https://vaibhavsingh97.mit-license.org/
 #-----------------------------------------------------------------------------
-import sys
 import json
 import requests
 import os
