@@ -15,12 +15,11 @@
 # @Github username: vaibhavsingh97
 # @Website: https://vaibhavsingh97.me
 # @Last Modified by: Vaibhav Singh
-# @Last Modified Date: 2017-08-28
+# @Last Modified Date: 2017-08-30
 # @License: MIT License
 # you can find your copy of the License
 # https://vaibhavsingh97.mit-license.org/
 #-----------------------------------------------------------------------------
-import sys
 import json
 import requests
 import os
@@ -84,16 +83,18 @@ class StalkPy():
     def notification(self, flag):
         """messages for StalkPy tool which will be printed according to the flags"""
         if flag == 1:
+            flag = 0
             return "Success: "
-            flag = 0
+
         elif flag == 2:
+            flag = 0
+            self.space()
             return " account found. :)"
-            space()
-            flag = 0
+
         elif flag == 3:
-            return " account not found. :("
-            space()
             flag = 0
+            self.space()
+            return " account not found. :("
 
     @classmethod
     def CleanedLink(self, url, username):
