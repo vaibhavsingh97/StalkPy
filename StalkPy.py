@@ -20,6 +20,7 @@
 # you can find your copy of the License
 # https://vaibhavsingh97.mit-license.org/
 #-----------------------------------------------------------------------------
+import sys
 import json
 import requests
 import os
@@ -83,14 +84,15 @@ class StalkPy():
     def notification(self, flag):
         """messages for StalkPy tool which will be printed according to the flags"""
         if flag == 1:
-            puts(colored.red("Error: wrong value entered! Please enter correct value."))
-            space()
+            return "Success: "
             flag = 0
         elif flag == 2:
-            puts(colored.green("Success: Social account found. :)"))
+            return " account found. :)"
+            space()
             flag = 0
         elif flag == 3:
-            puts(colored.red("No Social accounts found. :("))
+            return " account not found. :("
+            space()
             flag = 0
 
     @classmethod
@@ -103,14 +105,18 @@ class StalkPy():
                 r = requests.get(self.CleanedLink(
                     self.data[social_account_name], user))
                 if r.status_code == 200:
-                    self.notification(2)
+                    puts(colored.green(self.notification(1) +
+                                       social_account_name + self.notification(2)))
                     webbrowser.open(self.CleanedLink(
                         self.data[social_account_name], user), new=1)
                     puts(colored.green(social_account_name + ": ") +
                          colored.blue(self.CleanedLink(self.data[social_account_name], user)))
+                elif r.status_code == 404:
+                    puts(colored.red(social_account_name + self.notification
+                                     (3)))
                 r.close()
             except Exception as e:
-                return e
+                print(e)
 
 
 if __name__ == '__main__':

@@ -1,4 +1,4 @@
 codecov==2.0.9
 requests==2.18.4
 clint==0.5.1
-argparse==1.2.1
+argparse==1.4.0

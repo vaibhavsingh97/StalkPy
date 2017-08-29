@@ -49,15 +49,23 @@ $ python StalkPy.py [-h] [--help]
 
 **3.)** The `Config.json` contains a list of social accounts. You can add as many social accounts you want. Just remember to ensure the `Config.json` file is [valid JSON](http://jsonlint.com/).
 
+### Support
+
+|         | Python 2.7                      | Python 3.5                      |
+|---------|---------------------------------|---------------------------------|
+| Linux   | :white_check_mark: Full support | :white_check_mark: Full support |
+| Max OS  | Testing :construction:          | Testing :construction:          |
+| Windows | Testing :construction:          | Testing :construction:          |
+
 #### To-do
 
 - [ ] Make the script faster :)
 - [ ] check list of browser and open accordingly
 - [ ] Command line addition of accounts to `Config.json`
 - [ ] check the validity of username.
-- [ ] handle case if no social account found
+- [x] ~~handle case if no social account found~~
 - [ ] test cross plateform support
-- [x] Add clint support (used argparse)
+- [x] ~~Add clint support (used argparse)~~
 
 ## Issues
 
