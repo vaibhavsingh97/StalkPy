@@ -55,7 +55,7 @@ $ python StalkPy.py [-h] [--help]
 |---------|---------------------------------|---------------------------------|
 | Linux   | :white_check_mark: Full support | :white_check_mark: Full support |
 | Max OS  | Testing :construction:          | Testing :construction:          |
-| Windows | Testing :construction:          | Testing :construction:          |
+| Windows | :white_check_mark: Full support | :white_check_mark: Full support |
 
 #### To-do
 
