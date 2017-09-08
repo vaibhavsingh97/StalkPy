@@ -54,7 +54,7 @@ $ python StalkPy.py [-h] [--help]
 |         | Python 2.7                      | Python 3.5                      |
 |---------|---------------------------------|---------------------------------|
 | Linux   | :white_check_mark: Full support | :white_check_mark: Full support |
-| Max OS  | Testing :construction:          | Testing :construction:          |
+| Max OS  | :white_check_mark: Full support | :white_check_mark: Full support |
 | Windows | :white_check_mark: Full support | :white_check_mark: Full support |
 
 #### To-do
@@ -64,7 +64,7 @@ $ python StalkPy.py [-h] [--help]
 - [ ] Command line addition of accounts to `Config.json`
 - [ ] check the validity of username.
 - [x] ~~handle case if no social account found~~
-- [ ] test cross plateform support
+- [x] ~~test cross plateform support~~
 - [x] ~~Add clint support (used argparse)~~
 
 ## Issues
