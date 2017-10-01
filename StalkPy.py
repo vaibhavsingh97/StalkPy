@@ -127,13 +127,22 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         description="StalkPy help you to stalk anyone ;)")
     parser.add_argument('-u', '--username', type=str,
-                        help='Usename you want to stalk', required=True, nargs='+')
+                        help='Usename you want to stalk', nargs='+')
+    parser.add_argument('-a', '--add', type=str, help="Add a URL in cofiguration file")
     args = parser.parse_args()
-    username_list = args.username[0].split(",")
-    for n in username_list:
-        StalkPy().space()
-        puts(colored.magenta("User: %s" % n))
-        t = threading.Thread(target=StalkPy().OpenLinks(n))
-        t.start()
-        t.join()
-    print("Elapsed Time: %s" % (timer() - start,))
+    if(args.username is not None):
+        username_list = args.username[0].split(",")
+        for n in username_list:
+            StalkPy().space()
+            puts(colored.magenta("User: %s" % n))
+            t = threading.Thread(target=StalkPy().OpenLinks(n))
+            t.start()
+            t.join()
+        print("Elapsed Time: %s" % (timer() - start,))
+    if args.add is not None:
+        url_list = args.add.split(',')
+        f = json.loads(open('config.json', 'r').read())
+        for i in url_list:
+            f.update({i:i})
+        with open('config.json', 'w') as file:
+            file.write(json.dumps(f, indent=4))

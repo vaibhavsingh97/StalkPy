@@ -39,6 +39,12 @@ User can query as many username
 $ python StalkPy.py -u USERNAME [USERNAME ...]
 ```
 
+User can add URLS in configuration file
+
+```
+$ python StalkPy.py -a https://instagram.com,https://youtube.com
+```
+
 To get help use
 
 ```
@@ -61,7 +67,7 @@ $ python StalkPy.py [-h] [--help]
 
 - [ ] Make the script faster :)
 - [ ] check list of browser and open accordingly
-- [ ] Command line addition of accounts to `Config.json`
+- [x] Command line addition of accounts to `Config.json`
 - [ ] check the validity of username.
 - [x] ~~handle case if no social account found~~
 - [x] ~~test cross plateform support~~
