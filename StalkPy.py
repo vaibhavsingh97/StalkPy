@@ -127,7 +127,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         description="StalkPy help you to stalk anyone ;)")
     parser.add_argument('-u', '--username', type=str,
-                        help='Usename you want to stalk', required=True, nargs='+')
+                        help='Usename you want to stalk', nargs='+')
     parser.add_argument('-a', '--add', type=str,
                         help='Add social media account, pattern [account:link] e.g. spotify:spotify.com/user', nargs="+")
     args = parser.parse_args()
@@ -146,11 +146,12 @@ if __name__ == '__main__':
                     print("Please enter account in the pattern [name:link] e.g. spotify:spotify.com/user")
             json.dump(existing_acconts, config_file, indent=2)
 
-    username_list = args.username[0].split(",")
-    for n in username_list:
-        StalkPy().space()
-        puts(colored.magenta("User: %s" % n))
-        t = threading.Thread(target=StalkPy().OpenLinks(n))
-        t.start()
-        t.join()
-    print("Elapsed Time: %s" % (timer() - start,))
+    if args.username is not None:
+        username_list = args.username[0].split(",")
+        for n in username_list:
+            StalkPy().space()
+            puts(colored.magenta("User: %s" % n))
+            t = threading.Thread(target=StalkPy().OpenLinks(n))
+            t.start()
+            t.join()
+        print("Elapsed Time: %s" % (timer() - start,))

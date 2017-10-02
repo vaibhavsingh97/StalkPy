@@ -61,7 +61,7 @@ $ python StalkPy.py [-h] [--help]
 
 - [ ] Make the script faster :)
 - [ ] check list of browser and open accordingly
-- [x ] ~~Command line addition of accounts to `Config.json`~~
+- [x] ~~Command line addition of accounts to `Config.json`~~
 - [ ] check the validity of username.
 - [x] ~~handle case if no social account found~~
 - [x] ~~test cross plateform support~~
