@@ -128,7 +128,24 @@ if __name__ == '__main__':
         description="StalkPy help you to stalk anyone ;)")
     parser.add_argument('-u', '--username', type=str,
                         help='Usename you want to stalk', required=True, nargs='+')
+    parser.add_argument('-a', '--add', type=str,
+                        help='Add social media account, pattern [account:link] e.g. spotify:spotify.com/user', nargs="+")
     args = parser.parse_args()
+
+    if args.add is not None:
+        social_media_accounts = args.add
+        with open("config.json", "r+") as config_file:
+            existing_acconts = json.load(config_file)
+            config_file.seek(0);
+            config_file.truncate()
+            for account in social_media_accounts:
+                try:
+                    account_name, account = account.split(':')
+                    existing_acconts[account_name] = account
+                except ValueError:
+                    print("Please enter account in the pattern [name:link] e.g. spotify:spotify.com/user")
+            json.dump(existing_acconts, config_file, indent=2)
+
     username_list = args.username[0].split(",")
     for n in username_list:
         StalkPy().space()
