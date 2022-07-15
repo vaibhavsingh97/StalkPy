@@ -2,7 +2,7 @@ args==0.1.0
 certifi==2018.4.16
 chardet==3.0.4
 clint==0.5.1
-codecov==2.0.15
+codecov==2.0.16
 coverage==4.5.1
 idna==2.6
 requests==2.20.0
